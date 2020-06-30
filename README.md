@@ -4,7 +4,7 @@ Vefsíða fyrir arbaeehf.is og husihus.is
 
 Nuxt + Vuetify + Prismic
 
-readme test
+readme test02
 
 ## Build Setup
 
