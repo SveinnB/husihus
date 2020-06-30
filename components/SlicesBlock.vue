@@ -1,0 +1,56 @@
+<template>
+  <div>
+    <!-- Slice section template -->
+    <section v-for="(slice, index) in slices" :key="'slice-' + index" class="">
+      
+      <!-- Text slice component -->
+      <template v-if="slice.slice_type === 'text_section'">
+        <text-slice :slice="slice" />
+      </template>
+
+      <template v-else-if="slice.slice_type === 'lightbox_gallery'">
+        <ImageGalleryCoolLightBox :slice="slice"/>
+      </template>
+
+      <template v-else-if="slice.slice_type === 'text_and_image'">
+        <TextAndImage :slice="slice"/>
+      </template>
+
+      <template v-else-if="slice.slice_type === 'employees'">
+        <Employess :slice="slice"/>
+      </template>
+
+      <template v-else-if="slice.slice_type === 'reviews'">
+        <Reviews :slice="slice"/>
+      </template>
+
+      <template v-else-if="slice.slice_type === 'images'">
+        <Images :slice="slice"/>
+      </template>
+
+    </section>
+  </div>
+</template>
+
+<script>
+// Imports for all slices
+const TextSlice = () => import("./slices/TextSlice.vue");
+const ImageGalleryCoolLightBox = () => import("./slices/ImageGalleryCoolLightBox.vue");
+const TextAndImage = () => import("./slices/TextAndImage.vue");
+const Images = () => import("./slices/Images.vue");
+const Reviews = () => import("./slices/Reviews.vue");
+const Employess = () => import("./slices/Employess.vue");
+
+export default {
+  props: ['slices'],
+  name: 'slices-block',
+  components: {
+    TextSlice,
+    ImageGalleryCoolLightBox,
+    TextAndImage,
+    Images,
+    Reviews,
+    Employess,
+  }
+}
+</script>
