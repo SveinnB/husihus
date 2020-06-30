@@ -2,7 +2,7 @@
   <v-app>
     <Navbar />
     <v-main>
-      <v-container :style="'max-width: ' + maxWidth">
+      <v-container :style="'max-width: ' + maxWidth" class="pink">
         <nuxt class="content" />
       </v-container>
     </v-main>
