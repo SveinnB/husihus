@@ -43,7 +43,7 @@ export default {
           src: item.image.url,
           alt: item.image.alt
         }
-        if(item.use_alt_for_title){
+        if(this.slice.primary.use_alt_for_title){
           let altList = [];
           if(img.alt !== null){
             altList = img.alt.split("\n");
