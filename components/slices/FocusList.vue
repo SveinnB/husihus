@@ -1,0 +1,21 @@
+<template>
+  <v-container>
+    <v-row justify="center" align="center" no-gutters>
+      <template v-for="(item, index) in slice.items">
+        <v-col :key="'word_' + index" cols="12" xs="6" sm="5" md="4" lg="3">
+        <p class="text-h6 text-center">
+          {{ item.word }}
+        </p>
+      </v-col>
+      </template>  
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  props: ['slice'],
+  name: 'FocusList'
+}
+</script>
+

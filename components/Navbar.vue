@@ -3,13 +3,13 @@
 
     <a href="/" class="d-flex justify-center align-center">
       <prismic-image :field="$store.state.menu.company_logo" class="logo_style" />
-      <p class="mx-3 ma-0 text-subtitle-2 text-sm-h6 black--text">{{ $prismic.asText($store.state.menu.company_name) }}</p>
+     <!--  <p class="mx-3 ma-0 text-subtitle-2 text-sm-h6 black--text">{{ $prismic.asText($store.state.menu.company_name) }}</p> -->
     </a>
     <v-spacer></v-spacer>
     <nav class="hidden-md-and-down">
       <ul>
         <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id" class="d-inline">
-          <prismic-link :field="menuLink.link" class="text-h5 black--text mx-2">
+          <prismic-link :field="menuLink.link" class="text-h6 black--text mx-2">
             {{ menuLink.link_label }}
           </prismic-link>
         </li>
@@ -34,7 +34,7 @@
             <v-list>
               <v-list-item v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id" @click="dialog = false">
                 <v-list-item-content class="">
-                  <prismic-link :field="menuLink.link" class="black--text text-h3 my-3">
+                  <prismic-link :field="menuLink.link" class="black--text text-h4 my-3">
                     {{ menuLink.link_label }}
                   </prismic-link>
                 </v-list-item-content>
@@ -69,11 +69,11 @@ export default {
   max-height: 80px;
 }
 
-@media (max-width: 599px){
+/* @media (max-width: 599px){
   .logo_style {
     max-width: 50px; 
   }
-}
+} */
 
 
 .dialog_close_div {

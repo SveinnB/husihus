@@ -28,6 +28,10 @@
         <Images :slice="slice"/>
       </template>
 
+      <template v-else-if="slice.slice_type === 'focus_list'">
+        <FocusList :slice="slice"/>
+      </template>
+
     </section>
   </div>
 </template>
@@ -40,6 +44,7 @@ const TextAndImage = () => import("./slices/TextAndImage.vue");
 const Images = () => import("./slices/Images.vue");
 const Reviews = () => import("./slices/Reviews.vue");
 const Employess = () => import("./slices/Employess.vue");
+const FocusList = () => import("./slices/FocusList.vue");
 
 export default {
   props: ['slices'],
@@ -51,6 +56,7 @@ export default {
     Images,
     Reviews,
     Employess,
+    FocusList
   }
 }
 </script>

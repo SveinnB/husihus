@@ -1,5 +1,5 @@
 <template>
-  <slices-block :slices="slices"/>
+  <slices-block class="mt-5" :slices="slices"/>
 </template>
 
 <script>

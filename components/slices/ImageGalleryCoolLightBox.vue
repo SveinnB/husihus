@@ -1,5 +1,5 @@
 <template>
-  <v-container class="">
+  <v-container>
     <v-row justify="center">
        <v-img v-for="(item, imageIndex) in items" :key="'lightbox_img_' + imageIndex"
           :src="item.src"
@@ -43,11 +43,27 @@ export default {
           src: item.image.url,
           alt: item.image.alt
         }
+        if(item.use_alt_for_title){
+          let altList = [];
+          if(img.alt !== null){
+            altList = img.alt.split("\n");
+          }
+          if(img.title === null && img.alt !== null){
+            if(altList.length > 0){
+              img.title = altList[0];
+            }
+          }
+          if(img.description === null && img.alt !== null){
+            if(altList.length > 1){
+              img.description = altList[1];
+            }
+          }
+        }
         this.items.push(img);
       });
     }
     if(this.isNumber(this.slice.primary.aspect_ratio)){
-      const ar = parseInt(this.slice.primary.aspect_ratio, 10);
+      const ar = Number.parseFloat(this.slice.primary.aspect_ratio).toFixed(4);
       if(ar > 0 && ar < 10 ){
         this.aspectRatio = ar;
       }
@@ -56,7 +72,7 @@ export default {
   methods: {
     isNumber(string){
       try{
-        const number = parseInt(string, 10);
+        const number = Number.parseFloat(string).toFixed(4);
         return true;
       }
       catch (e) {

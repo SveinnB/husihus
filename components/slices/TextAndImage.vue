@@ -44,7 +44,7 @@
 
       <v-col cols="12" md="6" lg="7" align-self="center">
         <v-row justify="center">
-          <prismic-rich-text :field="slice.primary.text" class="ml-5" />
+          <prismic-rich-text :field="slice.primary.text" class="" />
         </v-row>
       </v-col>
 
