@@ -41,8 +41,7 @@
 
       </template>
 
-      <v-col cols="6" md="2" class="">
-        
+      <v-col cols="6" md="2">
         <a href="https://www.si.is/byggingar-og-mannvirki/mh/" target="_blank">
           <v-img
           src="/mfh_logo.png"
@@ -51,11 +50,9 @@
           :max-height="150">
           </v-img>
         </a>
-
       </v-col>
 
-      <v-col cols="6" md="2" class="">
-        
+      <v-col cols="6" md="2">
         <a href="https://www.si.is/" target="_blank">
           <v-img
           src="/si_logo.png"
@@ -65,6 +62,7 @@
           </v-img>
         </a>
       </v-col>
+      
     </v-row>
   </div>
 </template>
