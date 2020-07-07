@@ -65,7 +65,6 @@
           </v-img>
         </a>
       </v-col>
-
     </v-row>
   </div>
 </template>
