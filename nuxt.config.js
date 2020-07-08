@@ -66,7 +66,15 @@ export default {
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */
-  vuetify: {},
+  vuetify: {
+    theme: {
+      themes: {
+        light: {
+          primary: '#f5822b',
+        }
+      }
+    }
+  },
   /*
   ** Build configuration
   */
@@ -81,7 +89,7 @@ export default {
     //transpile: ['CoolLightBox']
   },
 
-  generate: {
+ /*  generate: {
     fallback: '404.html' // Netlify reads a 404.html, Nuxt will load as an SPA
-  }
+  } */
 }
