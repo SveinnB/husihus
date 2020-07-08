@@ -16,7 +16,7 @@ export default {
   },
   async asyncData({ $prismic, params, error }) {
     try{
-      const document = (await $prismic.api.getByUID('page', params.uid)).data
+      const document = (await $prismic.api.getByUID('page', params.uid)).data;
       return {
         // Set slices as variable
         slices: document.page_content,
@@ -25,7 +25,7 @@ export default {
     }
     catch (e) {
       // Returns error page
-      error({ statusCode: 404, message: 'Page not found' })
+      error({ statusCode: 404, message: 'Page not found' });
     }
   },
 }

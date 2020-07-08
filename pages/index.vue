@@ -13,12 +13,12 @@ export default {
   async asyncData({ $prismic, error }) {
     try{
       // Query to get the home page content
-      const homepage = (await $prismic.api.getSingle('home_page')).data
+      const homepage = (await $prismic.api.getSingle('home_page')).data;
       return {
         slices: homepage.body
       }
     } catch (e) {
-      error({ statusCode: 404, message: 'Page not found' })
+      error({ statusCode: 404, message: 'Page not found' });
     }
   },
 }
