@@ -8,8 +8,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'Error',
-    layout: 'error'
-  }
+export default {
+  name: 'Error',
+}
 </script>

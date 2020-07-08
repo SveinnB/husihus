@@ -2,11 +2,11 @@
   <v-app>
     <Navbar />
     <v-main>
-      <v-container style="max-width: 1200px">
+      <v-container class="width">
         <nuxt class="content" />
       </v-container>
     </v-main>
-    <v-container style="max-width: 1200px">
+    <v-container class="width">
       <Footer class="footer" />
     </v-container>
   </v-app>
@@ -25,11 +25,6 @@ export default {
     await store.dispatch('fetchMenu', $prismic);
     await store.dispatch('fetchFooter', $prismic);
   },
-  data() {
-    return {
-      maxWidth: '900px'
-    }
-  }
 }
 </script>
 
