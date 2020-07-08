@@ -6,6 +6,8 @@
           :alt="item.image.alt"
           contain
           class="ma-3"
+          width="100%"
+          height="100%"
           :max-width="slice.primary.max_width"
           :max-height="slice.primary.max_height">
           <template v-slot:placeholder>

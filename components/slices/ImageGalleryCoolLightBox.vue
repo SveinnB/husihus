@@ -4,7 +4,7 @@
        <v-img v-for="(item, imageIndex) in items" :key="'lightbox_img_' + imageIndex"
           :src="item.src"
           :alt="item.alt"
-          class="ma-3 elevation-5"
+          class="ma-3 elevation-7"
           width="100%"
           height="100%"
           :aspect-ratio="aspectRatio"

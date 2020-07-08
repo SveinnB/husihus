@@ -1,5 +1,5 @@
 <template>
-  <slices-block class="mt-5" :slices="slices"/>
+  <slices-block :slices="slices"/>
 </template>
 
 <script>
@@ -23,7 +23,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-
-</style>

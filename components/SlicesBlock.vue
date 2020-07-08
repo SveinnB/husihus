@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Slice section template -->
-    <section v-for="(slice, index) in slices" :key="'slice-' + index" class="">
+    <section v-for="(slice, index) in slices" :key="'slice-' + index" class="my-10">
       
       <!-- Text slice component -->
       <template v-if="slice.slice_type === 'text_section'">

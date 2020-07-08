@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="white" :height="90" :elevation="5">
+  <v-app-bar app color="white" :height="90" :elevation="3">
 
     <a href="/" class="d-flex justify-center align-center">
       <prismic-image :field="$store.state.menu.company_logo" class="logo_style" />
@@ -9,7 +9,7 @@
     <nav class="hidden-md-and-down">
       <ul>
         <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id" class="d-inline">
-          <prismic-link :field="menuLink.link" class="text-h6 black--text mx-2">
+          <prismic-link :field="menuLink.link" class="text-h6 black--text mx-4">
             {{ menuLink.link_label }}
           </prismic-link>
         </li>

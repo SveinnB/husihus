@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="my-3 text-h3">{{ $prismic.asText(title) }}</p>
+    <h1 class="mt-6">{{ $prismic.asText(title) }}</h1>
     <slices-block :slices="slices"/>
   </div>
 </template>
@@ -11,7 +11,7 @@ import SlicesBlock from '~/components/SlicesBlock.vue'
 
 export default {
   name: 'page',
-  components: {
+  components: { 
     SlicesBlock
   },
   async asyncData({ $prismic, params, error }) {

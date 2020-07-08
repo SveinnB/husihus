@@ -2,11 +2,11 @@
   <v-app>
     <Navbar />
     <v-main>
-      <v-container :style="'max-width: ' + maxWidth">
+      <v-container style="max-width: 1200px">
         <nuxt class="content" />
       </v-container>
     </v-main>
-    <v-container :style="'max-width: ' + maxWidth">
+    <v-container style="max-width: 1200px">
       <Footer class="footer" />
     </v-container>
   </v-app>
@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      maxWidth: '1200px'
+      maxWidth: '900px'
     }
   }
 }

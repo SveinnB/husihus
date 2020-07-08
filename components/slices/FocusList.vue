@@ -1,13 +1,13 @@
 <template>
-  <v-container>
+  <v-container class="pa-0">
     <v-row justify="center" align="center" no-gutters>
       <template v-for="(item, index) in slice.items">
         <v-col :key="'word_' + index" cols="12" xs="6" sm="5" md="4" lg="3">
-        <p class="text-h6 text-center">
-          {{ item.word }}
-        </p>
+          <p class="text-h5 text-center my-2">
+            {{ item.word }}
+          </p>
       </v-col>
-      </template>  
+      </template>
     </v-row>
   </v-container>
 </template>
