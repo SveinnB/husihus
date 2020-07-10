@@ -13,6 +13,7 @@
             {{ menuLink.link_label }}
           </prismic-link>
         </li>
+        <a href="/hafa-samband" class="text-h6 black--text mx-4">Hafa samband</a>
       </ul>
     </nav>
 

@@ -14,6 +14,11 @@ export default {
   components: { 
     SlicesBlock
   },
+  head(){
+    return {
+      title: this.$prismic.asText(this.title)
+    }
+  },
   async asyncData({ $prismic, params, error }) {
     try{
       const document = (await $prismic.api.getByUID('page', params.uid)).data;
