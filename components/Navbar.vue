@@ -30,14 +30,19 @@
           </v-icon>
         </div>
 
-        <div style="margin: auto">
+        <div class="ma-auto">
           <nav>
             <v-list>
               <v-list-item v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id" @click="dialog = false">
-                <v-list-item-content class="">
+                <v-list-item-content>
                   <prismic-link :field="menuLink.link" class="black--text text-h4 my-3">
                     {{ menuLink.link_label }}
                   </prismic-link>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item @click="dialog = false">
+                <v-list-item-content>
+                  <a href="/hafa-samband" class="black--text text-h4 my-3">Hafa samband</a>
                 </v-list-item-content>
               </v-list-item>
             </v-list>
