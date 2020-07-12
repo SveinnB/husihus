@@ -1,6 +1,6 @@
 # Árbær - Hús í hús
 
-Vefsíða fyrir arb.is, arbaeehf.is og husihus.is
+Vefsíða fyrir [arb.is](https://arb.is), [arbaerehf.is](https://arbaerehf.is) og [husihus.is](https://husihus.is)
 
 Nuxt + Vuetify + Prismic
 
