@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <v-container>
     <h1 class="mt-6">Hafa samband</h1>
     <p>Einfalt er að senda okkur skilaboð hérna á vefnum</p>
     <ContactForm />
-  </div>
+  </v-container>
 </template>
 
 <script>
