@@ -1,19 +1,20 @@
 <template>
   <v-app-bar app color="white" :height="90" :elevation="3">
 
-    <a href="/" class="d-flex justify-center align-center">
-      <prismic-image :field="$store.state.menu.company_logo" class="logo_style" />
-    </a>
+    <nuxt-link to="/">
+      <v-img src="/arbaer_logo.png" contain class="logo_style">
+      </v-img>
+    </nuxt-link>
+
     <v-spacer></v-spacer>
+
     <nav class="hidden-md-and-down">
-      <ul>
-        <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id" class="d-inline">
-          <prismic-link :field="menuLink.link" class="text-h6 black--text mx-4">
-            {{ menuLink.link_label }}
-          </prismic-link>
-        </li>
-        <nuxt-link to="/hafa-samband" class="text-h6 black--text mx-4">Hafa samband</nuxt-link>
-      </ul>
+      <v-tabs right>
+        <v-tabs-slider color="transparent"></v-tabs-slider>
+        <v-tab v-for="(item, index) in navList" :key="'tab_' + index" nuxt :to="item.to">
+          {{ item.name }}
+        </v-tab>
+      </v-tabs>
     </nav>
 
     <v-icon @click="dialog = !dialog" size="40" class="hidden-lg-and-up ma-3 pa-2">
@@ -29,24 +30,17 @@
           </v-icon>
         </div>
 
-        <div class="ma-auto">
-          <nav>
-            <v-list>
-              <v-list-item v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id" @click="dialog = false">
-                <v-list-item-content>
-                  <prismic-link :field="menuLink.link" class="black--text text-h4 my-3">
-                    {{ menuLink.link_label }}
-                  </prismic-link>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item @click="dialog = false">
-                <v-list-item-content>
-                  <nuxt-link to="/hafa-samband" class="black--text text-h4 my-3">Hafa samband</nuxt-link>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
+        <div class="ma-auto yellow">
+          <nav class="red">
+            <v-tabs vertical>
+              <v-tabs-slider color="transparent"></v-tabs-slider>
+              <v-tab v-for="(item, index) in navList" :key="'tab_' + index" nuxt :to="item.to" class="ma-3 text-h5" @click="dialog = false">
+                {{ item.name }}
+              </v-tab>
+            </v-tabs>
           </nav>
         </div>
+
       </div>
    </v-dialog>
   </v-app-bar>
@@ -57,7 +51,29 @@ export default {
   name: 'Navbar',
   data() {
     return {
-      dialog: false
+      dialog: false,
+      navList: [
+        {
+          name: 'Forsíða',
+          to: '/'
+        },
+        {
+          name: 'Um okkur',
+          to: '/um-okkur'
+        },
+        {
+          name: 'Verðskrá',
+          to: '/verdskra'
+        },
+        {
+          name: 'Verkefni',
+          to: '/verkefni'
+        },
+        {
+          name: 'Hafa samband',
+          to: '/hafa-samband'
+        }
+      ]
     }
   }
 }
@@ -68,12 +84,6 @@ export default {
   max-width: 80px;
   max-height: 80px;
 }
-
-/* @media (max-width: 599px){
-  .logo_style {
-    max-width: 50px; 
-  }
-} */
 
 .dialog_close_div {
   position: absolute;

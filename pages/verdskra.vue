@@ -1,15 +1,19 @@
 <template>
-  <slices-block :slices="slices"/>
+  <div>
+    <h1 class="mt-6">{{ $prismic.asText(title) }}</h1>
+    <slices-block :slices="slices"/>
+  </div>
 </template>
+
 
 <script>
 import SlicesBlock from '~/components/SlicesBlock.vue'
 import readSEO from '~/helper/ReadSEO'
 
 export default {
-  name: 'Home',
-  components: {
-    SlicesBlock,
+  name: 'verdskra',
+  components: { 
+    SlicesBlock
   },
   head(){
     return {
@@ -19,7 +23,7 @@ export default {
   },
   async asyncData({ $prismic, error }) {
     try{
-      const document = (await $prismic.api.getByUID('page', 'homepage')).data;
+      const document = (await $prismic.api.getByUID('page', 'verdskra')).data;
       return {
         // Set slices as variable
         slices: document.page_content,

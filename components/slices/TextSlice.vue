@@ -1,6 +1,6 @@
 <template>
   <v-row :justify="alignment.justify" no-gutters>
-    <prismic-rich-text :field="slice.primary.rich_text" :class="alignment.class" class=""/>
+    <prismic-rich-text :field="slice.primary.rich_text" :class="alignment.class"/>
   </v-row>
 </template>
 
@@ -24,13 +24,13 @@ export default {
       }
     }
   }
-
 }
 </script>
 
+
 <style scoped>
 .rich_text_style{
-  max-width: 900px;
+  max-width: 800px;
 }
 </style>
 

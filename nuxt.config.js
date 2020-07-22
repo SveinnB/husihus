@@ -20,7 +20,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ]
   },
-
+  //target: 'static',
+  components: true,
   /*
   ** Customize the progress-bar color
   */
@@ -30,7 +31,6 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/normalize.css',
     '@/assets/css/common.css',
   ],
 
@@ -39,7 +39,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/cool-lightbox', ssr: true },
-    //{ src: "~/plugins/aos", ssr: false }
+    { src: '~plugins/ga.js', mode: 'client' }
  ],
  
   /*
@@ -86,7 +86,6 @@ export default {
       // to transform link with <nuxt-link> for the htmlSerializer
       config.resolve.alias['vue'] = 'vue/dist/vue.common'
     },
-    //transpile: ['CoolLightBox']
   },
   generate: {
     fallback: '404.html' // Netlify reads a 404.html, Nuxt will load as an SPA

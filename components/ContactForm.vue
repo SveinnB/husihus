@@ -77,7 +77,11 @@
 
     <v-dialog v-model="dialog" :max-width="600" persistent>
       <v-card>
-        <v-card-title>😎 Skilaboð farin af stað 🛫</v-card-title>
+        <v-card-title>
+          <v-row justify="center">
+            😎 Skilaboð farin af stað 🛫
+          </v-row>
+        </v-card-title>
         <v-card-text class="text--primary">
           <v-progress-linear
             indeterminate
