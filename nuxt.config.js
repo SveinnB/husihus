@@ -50,7 +50,8 @@ export default {
     '@/modules/static',
     '@/modules/crawler',
     // https://prismic-nuxt.js.org/
-    '@nuxtjs/prismic'
+    '@nuxtjs/prismic',
+    '@nuxtjs/sitemap'
   ],
 
   buildModules: [
@@ -76,6 +77,25 @@ export default {
         }
       }
     }
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://arb.is',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: [
+      '/',
+      '/um-okkur',
+      '/verdskra',
+      '/verkefni',
+      '/hafa-samband',
+    ].map(route => ({
+      url: route,
+      changefreq: 'monthly',
+      priority: 1,
+      lastmodISO: new Date().toISOString().split('T')[0]
+    }))
   },
   /*
   ** Build configuration
