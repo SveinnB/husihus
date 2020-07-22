@@ -11,10 +11,6 @@ export default function (doc) {
   if (doc.type === 'home_page') {
     return '/';
   }
-
-  if (doc.type === 'page') {
-    return '/page/' + doc.uid;
-  }
   
   return '/not-found';
 }

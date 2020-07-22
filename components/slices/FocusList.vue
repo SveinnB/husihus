@@ -2,7 +2,7 @@
   <v-container class="pa-0">
     <v-row justify="center" align="center" no-gutters>
       <template v-for="(item, index) in slice.items">
-        <v-col :key="'word_' + index" cols="12" xs="6" sm="5" md="4" lg="3">
+        <v-col :key="'word_' + index" cols="12" xs="12" sm="6" md="4">
           <p class="text-h5 text-center my-2">
             {{ item.word }}
           </p>

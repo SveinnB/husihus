@@ -6,7 +6,7 @@
         <nuxt class="content" />
       </v-container>
     </v-main>
-    <v-container class="width">
+    <v-container>
       <Footer class="footer" />
     </v-container>
   </v-app>
@@ -22,7 +22,7 @@ export default {
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic }) {
-    await store.dispatch('fetchMenu', $prismic);
+    //await store.dispatch('fetchMenu', $prismic);
     await store.dispatch('fetchFooter', $prismic);
   },
 }
@@ -36,6 +36,6 @@ export default {
  flex-shrink: 0;
 }
 .width{
-  max-width: 1200px;
+  max-width: 900px;
 }
 </style>
