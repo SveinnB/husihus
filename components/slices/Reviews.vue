@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-card v-for="(item, index) in slice.items" :key="'review_' + index" max-width="700" class="ma-2">
+      <v-card v-for="(item, index) in slice.items" :key="'review_' + index" max-width="800" class="ma-2">
         <v-card-text class="text-subtitle-1">
           <prismic-rich-text :field="item.text"/>
         </v-card-text>
