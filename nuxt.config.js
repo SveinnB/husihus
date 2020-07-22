@@ -39,6 +39,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/cool-lightbox', ssr: true },
+    { src: '~plugins/ga.js', mode: 'client' }
  ],
  
   /*
