@@ -3,15 +3,15 @@
     <v-row justify="center" class="">
         <v-card v-for="(item, index) in slice.items" :key="index" class="ma-3" width="380">
           <v-card-title class="text-subtitle-2 text-sm-h5">{{ item.name }}</v-card-title>
-          <v-card-subtitle class="text-subtitle-1">{{ item.role }}</v-card-subtitle>
+          <v-card-subtitle class="text-body-2 text-sm-subtitle-1">{{ item.role }}</v-card-subtitle>
           <v-card-text>
-            <div class="mb-2 text-subtitle-1">
+            <div class="mb-2 text-body-2 text-sm-subtitle-1">
               <a :href="`mailto:${item.email}`" class="grey--text">
                 <v-icon class="mr-2">mdi-email</v-icon>{{ item.email }}
               </a>
             </div>
             <div>
-              <a :href="`tel:+354 ${item.phone}`" class="grey--text text-subtitle-1">
+              <a :href="`tel:+354 ${item.phone}`" class="grey--text text-body-2 text-sm-subtitle-1">
                 <v-icon color="husihus" size="20" class="mr-2">mdi-phone</v-icon>{{ formatPhoneNumber(item.phone) }}
               </a>
             </div>
