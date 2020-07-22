@@ -9,8 +9,10 @@
       <template v-else>
         <h2 class="ma-3 text-h6 text-sm-h4">Villa kom upp 🤔</h2>
       </template>
-      
-      <v-btn href="/" class="mt-10" text color="primary">Forsíða</v-btn>
+
+      <v-row justify="center">
+        <v-btn href="/" class="mt-10" text color="primary" max-width="120">Forsíða</v-btn>
+      </v-row>
       
     </div>
   </v-container>

@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="center" class="">
         <v-card v-for="(item, index) in slice.items" :key="index" class="ma-3" width="380">
-          <v-card-title class="text-h5">{{ item.name }}</v-card-title>
+          <v-card-title class="text-subtitle-2 text-sm-h5">{{ item.name }}</v-card-title>
           <v-card-subtitle class="text-subtitle-1">{{ item.role }}</v-card-subtitle>
           <v-card-text>
             <div class="mb-2 text-subtitle-1">
