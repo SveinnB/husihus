@@ -22,7 +22,6 @@ export default {
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic }) {
-    //await store.dispatch('fetchMenu', $prismic);
     await store.dispatch('fetchFooter', $prismic);
   },
 }
@@ -36,6 +35,6 @@ export default {
  flex-shrink: 0;
 }
 .width{
-  max-width: 900px;
+  max-width: 950px;
 }
 </style>

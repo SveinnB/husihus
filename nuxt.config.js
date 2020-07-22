@@ -39,7 +39,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/cool-lightbox', ssr: true },
-    { src: '~plugins/ga.js', mode: 'client' }
+    //{ src: '~plugins/ga.js', mode: 'client' }
  ],
  
   /*
@@ -67,6 +67,8 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
     theme: {
       themes: {
         light: {

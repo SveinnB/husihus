@@ -3,13 +3,13 @@
     
     <v-row v-if="slice.slice_label === 'image_right'" justify="center">
       
-      <v-col cols="12" md="6" lg="7" align-self="center">
-        <v-row justify="center">
+      <v-col cols="12" md="7" align-self="center">
+        <v-row justify="center" class="mx-auto">
           <prismic-rich-text :field="slice.primary.text" class="mr-5" />
         </v-row>
       </v-col>
 
-      <v-col cols="12" md="6" lg="5" align-self="center">
+      <v-col cols="12" md="5" align-self="center">
         <v-row justify="center">
           <v-img
           :src="slice.primary.image.url"
@@ -24,10 +24,9 @@
       </v-col>
 
     </v-row>
-
     <v-row v-else>
 
-      <v-col cols="12" md="6" lg="5" align-self="center">
+      <v-col cols="12" md="5" align-self="center">
         <v-row justify="center">
           <v-img
           contain
@@ -42,9 +41,9 @@
         </v-row>
       </v-col>
 
-      <v-col cols="12" md="6" lg="7" align-self="center">
-        <v-row justify="center">
-          <prismic-rich-text :field="slice.primary.text" class="" />
+      <v-col cols="12" md="7" align-self="center">
+        <v-row justify="center" class="mx-auto">
+          <prismic-rich-text :field="slice.primary.text" />
         </v-row>
       </v-col>
 

@@ -14,8 +14,8 @@ export default ({ app }) => {
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   /*
   ** Set the current page
-  */
-  ga('create', 'UA-173223442-1', 'auto')
+  */           // id from google
+  //ga('create', 'UA-173223442-1', 'auto')
   /*
   ** Every time the route changes (fired on initialization too)
   */
