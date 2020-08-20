@@ -17,7 +17,7 @@ export default {
   },
   head(){
     return {
-      title: this.$prismic.asText(this.title),
+      title: this.$prismic.asText(this.titleHead),
       meta: readSEO(this.body)
     }
   },
@@ -28,6 +28,7 @@ export default {
         // Set slices as variable
         slices: document.page_content,
         title: document.page_title,
+        titleHead: document.head_title,
         body: document.body
       }
     }
