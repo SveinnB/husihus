@@ -2,7 +2,7 @@
   <v-container>
     <v-form ref="form" v-model="formValid" lazy-validation 
       name="arb" action="/takk" method="POST"
-      data-netlify="true" data-netlify-recaptcha="true" @submit="sbbSubmit">
+      data-netlify="true" @submit="Submit">
       <input type="hidden" name="form-name" value="arb" />
 
       <v-row class="mb-2">
@@ -195,7 +195,7 @@
         }
         return defaultIcon;
       },
-      sbbSubmit(e) {
+      Submit(e) {
         if (!this.validate()) {
           this.snackbar = true;
           e.preventDefault();
