@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-form ref="form" v-model="formValid" lazy-validation 
+    <v-form ref="form" v-model="formValid" lazy-validation
       name="arb" action="/takk" method="POST"
       data-netlify="true" @submit="Submit">
       
@@ -53,11 +53,7 @@
           </v-file-input>
         </v-col>
       </v-row>
-
-<!--       <v-row class="my-2">
-        <div data-netlify-recaptcha="true"></div>
-      </v-row> -->
-
+      
       <v-row justify="end" class="">
         <v-btn :disabled="!formValid" color="primary" outlined
           :loading="submitLoading"

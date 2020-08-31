@@ -2,7 +2,7 @@
   <v-app-bar app color="white" :height="90" :elevation="3">
 
     <nuxt-link to="/">
-      <v-img src="/arbaer_logo.png" contain class="logo_style">
+      <v-img src="/arbaer_logo.png" alt="logo" contain class="logo_style">
       </v-img>
     </nuxt-link>
 
@@ -16,10 +16,11 @@
         </v-tab>
       </v-tabs>
     </nav>
+    
+    <v-app-bar-nav-icon @click="dialog = !dialog"
+      class="hidden-lg-and-up ma-3 pa-2" aria-label="hamburger nav icon">
+    </v-app-bar-nav-icon>
 
-    <v-icon @click="dialog = !dialog" size="40" class="hidden-lg-and-up ma-3 pa-2">
-      mdi-menu
-    </v-icon>
 
    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
      <div style="height: 100%; background-color: white; overflow: auto" class="d-flex flex-column">
