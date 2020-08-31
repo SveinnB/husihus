@@ -20,7 +20,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ]
   },
-  target: 'static',
+  //target: 'static',
   components: true,
   /*
   ** Customize the progress-bar color

@@ -42,7 +42,7 @@
       </template>
 
       <v-col cols="6" md="2">
-        <a href="https://www.si.is/byggingar-og-mannvirki/mh/" target="_blank">
+        <a href="https://www.si.is/byggingar-og-mannvirki/mh/" target="_blank" rel="noopener noreferrer">
           <v-img
           src="/mfh_logo.png"
           alt="Meistarafélag húsasmiða logo"
@@ -53,7 +53,7 @@
       </v-col>
 
       <v-col cols="6" md="2">
-        <a href="https://www.si.is/" target="_blank">
+        <a href="https://www.si.is/" target="_blank" rel="noopener noreferrer">
           <v-img
           src="/si_logo.png"
           alt="Samtök iðnaðarins logo"
