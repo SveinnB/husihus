@@ -3,6 +3,7 @@
     <v-form ref="form" v-model="formValid" lazy-validation 
       name="arb" action="/takk" method="POST"
       data-netlify="true" @submit="Submit">
+      
       <input type="hidden" name="form-name" value="arb" />
 
       <v-row class="mb-2">
@@ -53,9 +54,9 @@
         </v-col>
       </v-row>
 
-      <v-row class="my-2">
+<!--       <v-row class="my-2">
         <div data-netlify-recaptcha="true"></div>
-      </v-row>
+      </v-row> -->
 
       <v-row justify="end" class="">
         <v-btn :disabled="!formValid" color="primary" outlined
