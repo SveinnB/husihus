@@ -2,7 +2,10 @@
   <v-app-bar app color="white" :height="90" :elevation="3">
 
     <nuxt-link to="/">
-      <v-img src="/arbaer_logo.png" alt="logo" contain class="logo_style">
+      <v-img src="/arbaer_logo.png" alt="logo"
+        contain
+        :max-height="80"
+        :max-width="80">
       </v-img>
     </nuxt-link>
 
@@ -16,20 +19,27 @@
         </v-tab>
       </v-tabs>
     </nav>
-    
-    <v-app-bar-nav-icon @click="dialog = !dialog"
-      class="hidden-lg-and-up ma-3 pa-2" aria-label="hamburger nav icon">
-    </v-app-bar-nav-icon>
 
+    <v-btn @click="dialog = !dialog"
+      aria-label="hamburger_nav_icon_button"
+      fab text
+      class="transparent hidden-lg-and-up ma-3 pa-2">
+      <v-icon size="40" class="">
+        mdi-menu
+      </v-icon>
+    </v-btn>
 
    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
      <div style="height: 100%; background-color: white; overflow: auto" class="d-flex flex-column">
 
-        <div class="dialog_close_div">
-          <v-icon @click="dialog = false" size="40" class="ma-3 pa-2">
-            mdi-close
-          </v-icon>
-        </div>
+      <v-btn @click="dialog = !dialog"
+        aria-label="close_nav_icon_button"
+        fab text
+        class="transparent ma-3 pa-2 dialog_close">
+        <v-icon size="40">
+          mdi-close
+        </v-icon>
+      </v-btn>
 
         <div class="ma-auto yellow">
           <nav class="red">
@@ -81,12 +91,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo_style {
-  max-width: 80px;
-  max-height: 80px;
-}
-
-.dialog_close_div {
+.dialog_close {
   position: absolute;
   right: 10px;
   top: 10px;

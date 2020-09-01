@@ -1,9 +1,17 @@
-// import colors from 'vuetify/es5/util/colors'
-
 export default {
+  /*
+  ** Nuxt rendering mode
+  ** See https://nuxtjs.org/api/configuration-mode
+  */
   mode: 'universal',
   /*
+  ** Nuxt target
+  ** See https://nuxtjs.org/api/configuration-target
+  */
+  target: 'static',
+  /*
   ** Headers of the page
+  ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
     htmlAttrs: {
@@ -20,44 +28,38 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ]
   },
-  //target: 'static',
-  components: true,
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-
   /*
   ** Global CSS
   */
   css: [
     '@/assets/css/common.css',
   ],
-
   /*
   ** Plugins to load before mounting the App
+  ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
     { src: '~/plugins/cool-lightbox', ssr: true },
-    //{ src: '~plugins/ga.js', mode: 'client' }
- ],
- 
+  ],
+  /*
+  ** Auto import components
+  ** See https://nuxtjs.org/api/configuration-components
+  */
+  components: true,
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+    '@nuxtjs/vuetify',
+  ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // mofules for full static before `nuxt export` (coming in v2.12)
-    '@/modules/static',
-    '@/modules/crawler',
-    // https://prismic-nuxt.js.org/
     '@nuxtjs/prismic',
     '@nuxtjs/sitemap'
   ],
-
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
-
   prismic: {
     endpoint: 'https://husihusnuxt.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
@@ -94,11 +96,12 @@ export default {
       url: route,
       changefreq: 'monthly',
       priority: 1,
-      lastmodISO: new Date().toISOString().split('T')[0]
+      lastmodISO: new Date().toISOString()
     }))
   },
   /*
   ** Build configuration
+  ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
     /*
