@@ -2,9 +2,13 @@
   <v-container>
     <v-form ref="form" v-model="formValid" lazy-validation
       name="arb" action="/takk" method="POST"
-      data-netlify="true" @submit="Submit">
+      data-netlify="true" netlify-honeypot="bot-field-sbb" @submit="Submit">
       
       <input type="hidden" name="form-name" value="arb" />
+
+      <p class="d-none">
+        <label>Don’t fill this out if you're human: <input name="bot-field-sbb" /></label>
+      </p>
 
       <v-row class="mb-2">
         <v-text-field :rules="nameRules" label="Nafn" name="Nafn" type="text" required></v-text-field>
@@ -47,9 +51,10 @@
         <v-col cols="12" class="pa-0" no-gutters>
           <p class="ma-0 pa-0 subtitle-1">Þú getur sent okkur myndir og skjöl sem tengjast málinu</p>
         </v-col>
+        
         <v-col cols="12" class="ma-0 pa-0" v-for="(item, index) in fileList" :key="'colfile_' + index">
           <v-file-input :prepend-icon="item.icon" :name="`Skrá ${index+1}`" show-size :class="item.class"
-            :label="`Skrá ${index+1}`" @change="selectFile(index, $event)">
+            :label="`Skrá ${index+1}`" @change="selectFile(index, $event)" type="file">
           </v-file-input>
         </v-col>
       </v-row>

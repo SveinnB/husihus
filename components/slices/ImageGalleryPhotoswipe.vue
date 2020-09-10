@@ -57,7 +57,6 @@ export default {
         }
         this.items.push(img);
       });
-      console.log(JSON.stringify(this.items));
     }
     if(this.isNumber(this.slice.primary.aspect_ratio)){
       const ar = Number.parseFloat(this.slice.primary.aspect_ratio).toFixed(4);
