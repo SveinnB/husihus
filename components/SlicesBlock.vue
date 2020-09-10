@@ -8,8 +8,12 @@
         <text-slice :slice="slice" />
       </template>
 
-      <template v-else-if="slice.slice_type === 'lightbox_gallery'">
+<!--       <template v-else-if="slice.slice_type === 'lightbox_gallery'">
         <ImageGalleryCoolLightBox :slice="slice"/>
+      </template> -->
+
+      <template v-else-if="slice.slice_type === 'lightbox_gallery'">
+        <ImageGalleryPhotoswipe :slice="slice"/>
       </template>
 
       <template v-else-if="slice.slice_type === 'text_and_image'">
@@ -40,6 +44,7 @@
 // Imports for all slices
 const TextSlice = () => import("./slices/TextSlice.vue");
 const ImageGalleryCoolLightBox = () => import("./slices/ImageGalleryCoolLightBox.vue");
+const ImageGalleryPhotoswipe = () => import("./slices/ImageGalleryPhotoswipe.vue");
 const TextAndImage = () => import("./slices/TextAndImage.vue");
 const Images = () => import("./slices/Images.vue");
 const Reviews = () => import("./slices/Reviews.vue");
@@ -52,6 +57,7 @@ export default {
   components: {
     TextSlice,
     ImageGalleryCoolLightBox,
+    ImageGalleryPhotoswipe,
     TextAndImage,
     Images,
     Reviews,

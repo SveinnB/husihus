@@ -41,6 +41,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/cool-lightbox', ssr: true },
+    {src: '~/plugins/photoswipe', ssr: false},
   ],
   /*
   ** Auto import components
