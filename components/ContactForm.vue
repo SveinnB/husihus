@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-form ref="form" v-model="formValid" lazy-validation
-      name="arb" action="/takk" method="POST"
+      name="arb" action="/takk" method="POST" enctype="multipart/form-data"
       data-netlify="true" netlify-honeypot="bot-field-sbb" @submit="Submit">
       
       <input type="hidden" name="form-name" value="arb" />
