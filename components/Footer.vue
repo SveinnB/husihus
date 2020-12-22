@@ -6,8 +6,8 @@
     <v-row justify="center" align="center" class="my-3">
       <v-spacer></v-spacer>
 
-      <template v-for="(item, index) in $store.state.footer.company_list">
-        <v-col :key="index" cols="12" md="3">
+      <template v-for="(item, index) in $store.state.footer.company_list.filter(x => x.id == 1)">
+        <v-col :key="index" cols="12" md="4">
           <v-row justify="center" align="center">
             <div>
               <v-row>
@@ -41,7 +41,7 @@
 
       </template>
 
-      <v-col cols="6" md="2">
+      <v-col cols="6" md="4">
         <a href="https://www.si.is/byggingar-og-mannvirki/mh/" target="_blank" rel="noopener noreferrer">
           <v-img
           src="/mfh_logo.png"
@@ -52,7 +52,7 @@
         </a>
       </v-col>
 
-      <v-col cols="6" md="2">
+      <v-col cols="6" md="4">
         <a href="https://www.si.is/" target="_blank" rel="noopener noreferrer">
           <v-img
           src="/si_logo.png"
