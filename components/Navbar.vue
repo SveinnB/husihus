@@ -2,7 +2,7 @@
   <v-app-bar app color="white" :height="90" :elevation="3">
 
     <nuxt-link to="/">
-      <v-img src="/arbaer_logo.png" alt="logo"
+      <v-img src="/husihusLogo02.png" alt="logo"
         contain
         :max-height="80"
         :max-width="80">

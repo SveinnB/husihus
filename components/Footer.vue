@@ -6,7 +6,7 @@
     <v-row justify="center" align="center" class="my-3">
       <v-spacer></v-spacer>
 
-      <template v-for="(item, index) in $store.state.footer.company_list.filter(x => x.id == 1)">
+      <template v-for="(item, index) in $store.state.footer.company_list.filter(x => x.id == 2)">
         <v-col :key="index" cols="12" md="4">
           <v-row justify="center" align="center">
             <div>
