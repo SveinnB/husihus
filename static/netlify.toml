@@ -1,5 +1,8 @@
-## This rule redirects to an external API, signing requests with a secret
 [[redirects]]
   from = "/"
   to = "https://husihus.is"
   force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://husihus.is"
