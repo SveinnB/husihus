@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "https://husihus.is"
+  status = 302
