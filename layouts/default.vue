@@ -21,8 +21,9 @@ export default {
     Navbar, Footer
   },
   // Called before rendering the layout (even for error page)
-  async middleware({ store, $prismic }) {
-    await store.dispatch('fetchFooter', $prismic);
+  async middleware({ store, $prismic, redirect }) {
+    //await store.dispatch('fetchFooter', $prismic);
+    redirect(302, 'https://husihus.is')
   },
 }
 </script>
