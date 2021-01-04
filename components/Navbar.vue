@@ -73,10 +73,6 @@ export default {
           to: '/um-okkur'
         },
         {
-          name: 'Verðskrá',
-          to: '/verdskra'
-        },
-        {
           name: 'Verkefni',
           to: '/verkefni'
         },
