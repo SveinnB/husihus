@@ -22,9 +22,8 @@ export default {
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic, redirect }) {
-    //await store.dispatch('fetchFooter', $prismic);
-    redirect(302, 'https://husihus.is')
-  },
+    await store.dispatch('fetchFooter', $prismic);
+  }
 }
 </script>
 
