@@ -8,12 +8,17 @@
   to = "https://husihus.is/um-okkur"
   force = true
 
-[[redirects]]
-  from = "/verkefni"
-  to = "https://husihus.is/verkefni"
-  force = true
+# [[redirects]]
+#   from = "/verkefni"
+#   to = "https://husihus.is/verkefni"
+#   force = true
 
 [[redirects]]
   from = "/hafa-samband"
   to = "https://husihus.is/hafa-samband"
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://husihus.is"
   force = true
