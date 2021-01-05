@@ -1,12 +1,15 @@
 [[redirects]]
   from = "/"
   to = "https://husihus.is"
-  force = true
 
 [[redirects]]
-  from = "/*"
-  to = "https://husihus.is"
+  from = "/um-okkur"
+  to = "https://husihus.is/um-okkur"
 
 [[redirects]]
-  from = "/*/"
-  to = "https://husihus.is"
+  from = "/verkefni"
+  to = "https://husihus.is/verkefni"
+
+[[redirects]]
+  from = "/hafa-samband"
+  to = "https://husihus.is/hafa-samband"
