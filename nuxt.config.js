@@ -78,7 +78,7 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://arb.is',
+    hostname: 'https://husihus.is',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: false,
