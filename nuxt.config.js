@@ -1,10 +1,5 @@
 export default {
   /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
-  /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
@@ -83,14 +78,13 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://arb.is',
+    hostname: 'https://husihus.is',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: false,
     routes: [
       '/',
       '/um-okkur',
-      '/verdskra',
       '/verkefni',
       '/hafa-samband',
     ].map(route => ({

@@ -3,7 +3,7 @@
     <v-container>
       <v-row justify="space-around">
          <v-img
-            src="arbaer_logo_2.jpg"
+            src="husihus_logo.png"
             alt="Hús í hús ehf. logo"
             contain
             class="ma-3"

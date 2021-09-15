@@ -1,16 +1,12 @@
 <template>
   <div>
     <!-- Slice section template -->
-    <section v-for="(slice, index) in slices" :key="'slice-' + index" class="my-10">
+    <section v-for="(slice, index) in slices" :key="'slice-' + index" class="my-10 d-flex justify-center  ">
       
       <!-- Text slice component -->
       <template v-if="slice.slice_type === 'text_section'">
         <text-slice :slice="slice" />
       </template>
-
-<!--       <template v-else-if="slice.slice_type === 'lightbox_gallery'">
-        <ImageGalleryCoolLightBox :slice="slice"/>
-      </template> -->
 
       <template v-else-if="slice.slice_type === 'lightbox_gallery'">
         <ImageGalleryPhotoswipe :slice="slice"/>
