@@ -1,8 +1,10 @@
 <template>
-  <v-container class="">
+  <v-container>
     <h1>Hobbíhús</h1>
 
-    <p class="text-subtitle-1">Fullsmíðuð og tilbúin til flutnings</p>
+    <p class="text-subtitle-1">
+      Fullsmíðuð 15 fm. hobbúhús, óskráningarskylt og tilbúin til flutnings
+    </p>
 
     <v-carousel
       class="my-3"
@@ -13,13 +15,13 @@
       hide-delimiters
       show-arrows-on-hover
     >
-      <v-carousel-item v-for="(img, i) in images" :key="i">
+      <v-carousel-item v-for="(img, i) in images1" :key="i">
         <v-sheet height="100%" class="preview-img-item">
           <v-img
             contain
             :max-height="400"
             :src="img.src"
-            @click="$photoswipe.open(i, images)"
+            @click="$photoswipe.open(i, images1)"
           >
           </v-img>
         </v-sheet>
@@ -37,7 +39,8 @@
       á því byggingarstigi sem óskað er eftir. Stærð, lögun, klæðning, hurðar,
       gluggar og fleira fer eftir óskum kaupanda. Húsin eru rammgerð, byggð úr
       fyrsta flokks efni fyrir íslenskar aðstæður og munu endast um ókomna tíð.
-      Húsin eru smíðuð í Reykjavík af reyndum smiðum.
+      Húsin eru smíðuð í Reykjavík af reyndum smiðum og síðan flutt samsett og
+      tilbúin til niðursetningar á áfangastað.
     </p>
 
     <p>
@@ -48,7 +51,7 @@
     </p>
 
     <p>
-      Að Viðarhöfða stendur fullbúið sýningarhús sem er 15m2 óskráningarskylt
+      Að Viðarhöfða stendur fullbúið sýningarhús sem er 15 fm. óskráningarskylt
       golfbílahús sem staðsetja má utan byggingarreits. Húsið er með rafmagni,
       inniljósum, útiljósum, ofni, golfdúk, hallandi þaki og álklæðningu. Það er
       fullsmíðað og tilbúið til niðursetningar.
@@ -124,10 +127,10 @@
     </v-expansion-panels>
 
     <v-row justify="end" class="ma-0 mt-3">
-      <p class="ma-0">Verð 4.434.697 kr. með vsk</p>
+      <p class="ma-0">Verð 3.900.000 kr. með vsk</p>
     </v-row>
     <v-row justify="end" class="ma-0 mb-5">
-      <p class="ma-0 text-caption">Verð á fermeter (m2) 295.646 kr. með vsk</p>
+      <p class="ma-0 text-caption">Verð á fm. 260.000 kr. með vsk</p>
     </v-row>
 
     <p>
@@ -137,7 +140,23 @@
       breytast forsendur.
     </p>
 
-    <p>Hugmyndir að útfærslum</p>
+    <p class="text-h6 ma-0 mb-2">Teikningar</p>
+    <div class="mb-5">
+      <v-row v-for="(t, i) in teikningar" :key="i" class="ma-0">
+        <a
+          class="mb-2"
+          style="color: black"
+          :href="t.primary.linkdoc.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <v-icon color="primary">mdi-file-document-outline</v-icon>
+          {{ t.primary.label }}
+        </a>
+      </v-row>
+    </div>
+
+    <p class="text-h6 ma-0 mb-2">Hugmyndir að útfærslu</p>
 
     <v-card class="mb-6">
       <v-card-title>Hugmynd 1</v-card-title>
@@ -145,15 +164,13 @@
         <p class="black--text">
           15 fm Hobbí hús frá Hús í hús með hallandi þaki og bandsagaðri
           furuklæðningu, málað að ósk kaupanda. Fokhelt að innan, óeinangrað með
-          trégólfi, bílskúrshurð með gluggum og inngangshurð með gluggum.
+          trégólfi, bílskúrshurð og inngangshurð án glugga.
         </p>
         <v-row justify="end" class="ma-0">
-          <p class="ma-0">Verðhugmynd 3.119.728 kr. með vsk</p>
+          <p class="ma-0">Verðhugmynd 2.900.000 kr. með vsk</p>
         </v-row>
         <v-row justify="end" class="ma-0">
-          <p class="ma-0 text-caption">
-            Verð á fermeter (m2) 207.982 kr. með vsk
-          </p>
+          <p class="ma-0 text-caption">Verð á fm. 193.333 kr. með vsk</p>
         </v-row>
       </v-card-text>
     </v-card>
@@ -165,25 +182,44 @@
           15 fm Hobbí hús frá Hús í hús með hallandi þaki og bandsagaðri
           furuklæðningu, málað að ósk kaupanda. Einangrað loft, gólf og veggir.
           Rakavarðar spónaplötur í loftum á innveggjum og í gólfi. Veggir og
-          loft grunnað og málað. Bílskúrshurð með gluggum og inngangshurð með
-          gluggum.
+          loft grunnað og málað. Bílskúrshurð og inngangshurð án glugga.
         </p>
         <v-row justify="end" class="ma-0">
-          <p class="ma-0">Verðhugmynd 3.797.679 kr. með vsk</p>
+          <p class="ma-0">Verðhugmynd 3.400.000 kr. með vsk</p>
         </v-row>
         <v-row justify="end" class="ma-0">
-          <p class="ma-0 text-caption">
-            Verð á fermeter (m2) 253.179 kr. með vsk
-          </p>
+          <p class="ma-0 text-caption">Verð á fm. 226.667 kr. með vsk</p>
         </v-row>
       </v-card-text>
     </v-card>
 
-    <p class="ma-0 font-italic">
+    <p class="ma-0 mb-5 font-italic">
       Verðhugmyndir byggja á skilalýsingu og efnisvali sýningarhúss en í þessum
       dæmum eru húsin klædd með bandsagaðri furu í stað álbáru. Rafmagn, ljós og
       gólfdúkur er ekki innifalið í þessum dæmum.
     </p>
+
+    <v-carousel
+      class="my-3"
+      cycle
+      height="5%"
+      contain
+      hide-delimiter-background
+      hide-delimiters
+      show-arrows-on-hover
+    >
+      <v-carousel-item v-for="(img, i) in images2" :key="i">
+        <v-sheet height="100%" class="preview-img-item">
+          <v-img
+            contain
+            :max-height="400"
+            :src="img.src"
+            @click="$photoswipe.open(i, images2)"
+          >
+          </v-img>
+        </v-sheet>
+      </v-carousel-item>
+    </v-carousel>
 
     <v-row class="ma-0 mt-8 mb-3" justify="center">
       <p class="ma-0 text-h5 text-uppercase text-center">
@@ -220,43 +256,25 @@ export default {
     }
   },
   created() {
-    const lightboxSlice = this.slices.find(
+    const lightboxSlices = this.slices.filter(
       (x) => x.slice_type === "lightbox_gallery"
     );
-
-    if (lightboxSlice && lightboxSlice.items) {
-      lightboxSlice.items.forEach((item) => {
-        const img = {
-          title: item.image_title,
-          description: item.image_description,
-          src: item.image.url,
-          alt: item.image.alt,
-          w: item.image.dimensions.width,
-          h: item.image.dimensions.height,
-        };
-        if (lightboxSlice.use_alt_for_title) {
-          let altList = [];
-          if (img.alt !== null) {
-            altList = img.alt.split("\n");
-          }
-          if (img.title === null && img.alt !== null) {
-            if (altList.length > 0) {
-              img.title = altList[0];
-            }
-          }
-          if (img.description === null && img.alt !== null) {
-            if (altList.length > 1) {
-              img.description = altList[1];
-            }
-          }
-        }
-        this.images.push(img);
-      });
+    const lightboxSlicesOrdered = lightboxSlices.sort((a, b) => {
+      return a.primary.id - b.primary.id;
+    });
+    if (lightboxSlicesOrdered.length > 1) {
+      this.SetImageList(this.images1, lightboxSlicesOrdered[0]);
+      this.SetImageList(this.images2, lightboxSlicesOrdered[1]);
     }
+    this.teikningar = this.slices.filter(
+      (x) => x.slice_type === "link_document"
+    );
   },
   data() {
     return {
-      images: [],
+      images1: [],
+      images2: [],
+      teikningar: [],
       þak: [
         {
           text: "Tvöfalt lag af þakpappa, undirlag skrúfað og brætt saman á samskeitum og yfirlag heilbrætt",
@@ -361,6 +379,39 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    SetImageList(imageList, slice) {
+      if (slice && slice.items) {
+        slice.items.forEach((item) => {
+          const img = {
+            title: item.image_title,
+            description: item.image_description,
+            src: item.image.url,
+            alt: item.image.alt,
+            w: item.image.dimensions.width,
+            h: item.image.dimensions.height,
+          };
+          if (slice.use_alt_for_title) {
+            let altList = [];
+            if (img.alt !== null) {
+              altList = img.alt.split("\n");
+            }
+            if (img.title === null && img.alt !== null) {
+              if (altList.length > 0) {
+                img.title = altList[0];
+              }
+            }
+            if (img.description === null && img.alt !== null) {
+              if (altList.length > 1) {
+                img.description = altList[1];
+              }
+            }
+          }
+          imageList.push(img);
+        });
+      }
+    },
   },
 };
 </script>
