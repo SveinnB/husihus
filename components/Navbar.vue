@@ -1,12 +1,12 @@
 <template>
-  <v-app-bar app color="white" :height="90" :elevation="3">
+  <v-app-bar app color="white" :height="70" :elevation="3">
     <nuxt-link to="/">
       <v-img
         src="/husihusLogo02.png"
         alt="logo"
         contain
-        :max-height="80"
-        :max-width="80"
+        :max-height="40"
+        :max-width="50"
       >
       </v-img>
     </nuxt-link>
