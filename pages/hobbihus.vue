@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="preview-img-item">
     <h1>Hobbíhús</h1>
 
     <p class="text-subtitle-1">
@@ -9,18 +9,18 @@
     <v-carousel
       class="my-3"
       cycle
-      height="5%"
       contain
+      :height="$vuetify.breakpoint.mobile ? 300 : 500"
       hide-delimiter-background
       hide-delimiters
-      show-arrows-on-hover
     >
       <v-carousel-item v-for="(img, i) in images1" :key="i">
         <v-sheet height="100%" class="preview-img-item">
           <v-img
             contain
-            :max-height="400"
+            height="100%"
             :src="img.src"
+            :lazy-src="img.src"
             @click="$photoswipe.open(i, images1)"
           >
           </v-img>
@@ -51,7 +51,7 @@
     </p>
 
     <p>
-      Að Viðarhöfða stendur fullbúið sýningarhús sem er 15 fm. óskráningarskylt
+      Á Krókhálsi 6 stendur fullbúið sýningarhús sem er 15 fm. óskráningarskylt
       golfbílahús sem staðsetja má utan byggingarreits. Húsið er með rafmagni,
       inniljósum, útiljósum, ofni, golfdúk, hallandi þaki og álklæðningu. Það er
       fullsmíðað og tilbúið til niðursetningar.
@@ -202,19 +202,19 @@
     <v-carousel
       class="my-3"
       cycle
-      height="5%"
       contain
+      :height="$vuetify.breakpoint.mobile ? 300 : 500"
       hide-delimiter-background
       hide-delimiters
-      show-arrows-on-hover
     >
       <v-carousel-item v-for="(img, i) in images2" :key="i">
         <v-sheet height="100%" class="preview-img-item">
           <v-img
             contain
-            :max-height="400"
+            height="100%"
             :src="img.src"
-            @click="$photoswipe.open(i, images2)"
+            :lazy-src="img.src"
+            @click="$photoswipe.open(i, images1)"
           >
           </v-img>
         </v-sheet>
@@ -379,6 +379,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    width() {
+      return 9;
+    },
   },
   methods: {
     SetImageList(imageList, slice) {

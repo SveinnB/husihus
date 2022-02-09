@@ -1,37 +1,39 @@
 <template>
   <div>
     <!-- Slice section template -->
-    <section v-for="(slice, index) in slices" :key="'slice-' + index" class="my-10 d-flex justify-center  ">
-      
+    <section
+      v-for="(slice, index) in slices"
+      :key="'slice-' + index"
+      class="my-10 d-flex justify-center"
+    >
       <!-- Text slice component -->
       <template v-if="slice.slice_type === 'text_section'">
         <text-slice :slice="slice" />
       </template>
 
       <template v-else-if="slice.slice_type === 'lightbox_gallery'">
-        <ImageGalleryPhotoswipe :slice="slice"/>
+        <ImageGalleryPhotoswipe :slice="slice" />
       </template>
 
       <template v-else-if="slice.slice_type === 'text_and_image'">
-        <TextAndImage :slice="slice"/>
+        <TextAndImage :slice="slice" />
       </template>
 
       <template v-else-if="slice.slice_type === 'employees'">
-        <Employess :slice="slice"/>
+        <Employess :slice="slice" />
       </template>
 
       <template v-else-if="slice.slice_type === 'reviews'">
-        <Reviews :slice="slice"/>
+        <Reviews :slice="slice" />
       </template>
 
       <template v-else-if="slice.slice_type === 'images'">
-        <Images :slice="slice"/>
+        <Images :slice="slice" />
       </template>
 
       <template v-else-if="slice.slice_type === 'focus_list'">
-        <FocusList :slice="slice"/>
+        <FocusList :slice="slice" />
       </template>
-
     </section>
   </div>
 </template>
@@ -39,8 +41,8 @@
 <script>
 // Imports for all slices
 const TextSlice = () => import("./slices/TextSlice.vue");
-const ImageGalleryCoolLightBox = () => import("./slices/ImageGalleryCoolLightBox.vue");
-const ImageGalleryPhotoswipe = () => import("./slices/ImageGalleryPhotoswipe.vue");
+const ImageGalleryPhotoswipe = () =>
+  import("./slices/ImageGalleryPhotoswipe.vue");
 const TextAndImage = () => import("./slices/TextAndImage.vue");
 const Images = () => import("./slices/Images.vue");
 const Reviews = () => import("./slices/Reviews.vue");
@@ -48,17 +50,16 @@ const Employess = () => import("./slices/Employess.vue");
 const FocusList = () => import("./slices/FocusList.vue");
 
 export default {
-  props: ['slices'],
-  name: 'slices-block',
+  props: ["slices"],
+  name: "slices-block",
   components: {
     TextSlice,
-    ImageGalleryCoolLightBox,
     ImageGalleryPhotoswipe,
     TextAndImage,
     Images,
     Reviews,
     Employess,
-    FocusList
-  }
-}
+    FocusList,
+  },
+};
 </script>

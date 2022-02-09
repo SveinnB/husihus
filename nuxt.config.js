@@ -35,8 +35,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '~/plugins/cool-lightbox', ssr: true },
-    {src: '~/plugins/photoswipe', ssr: false},
+    //{ src: '~/plugins/cool-lightbox', ssr: true },
+    { src: '~/plugins/photoswipe', ssr: false },
   ],
   /*
   ** Auto import components

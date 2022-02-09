@@ -15,9 +15,9 @@
       <input type="hidden" name="form-name" value="husihus" />
 
       <p class="d-none">
-        <label
-          >Don’t fill this out if you're human: <input name="bot-field-sbb"
-        /></label>
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field-sbb" />
+        </label>
       </p>
 
       <v-row class="mb-2">
