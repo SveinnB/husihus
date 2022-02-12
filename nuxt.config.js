@@ -34,10 +34,7 @@ export default {
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
-    //{ src: '~/plugins/cool-lightbox', ssr: true },
-    { src: '~/plugins/photoswipe', ssr: false },
-  ],
+  plugins: [],
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
@@ -86,6 +83,7 @@ export default {
       '/',
       '/um-okkur',
       '/verkefni',
+      '/hobbihus',
       '/hafa-samband',
     ].map(route => ({
       url: route,

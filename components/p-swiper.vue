@@ -31,7 +31,7 @@
         </v-carousel>
       </template>
 
-      <v-card class="d-flex" color="black">
+      <v-card class="d-flex" color="black" rounded="0">
         <v-btn
           @click="dialog = !dialog"
           aria-label="close_nav_icon_button"

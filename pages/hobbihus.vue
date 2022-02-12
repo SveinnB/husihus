@@ -6,7 +6,9 @@
       Fullsmíðuð 15 fm. hobbúhús, óskráningarskylt og tilbúin til flutnings
     </p>
 
-    <v-carousel
+    <p-swiper class="my-3" :images="images1"></p-swiper>
+
+    <!-- <v-carousel
       class="my-3"
       cycle
       contain
@@ -26,7 +28,7 @@
           </v-img>
         </v-sheet>
       </v-carousel-item>
-    </v-carousel>
+    </v-carousel> -->
 
     <v-row class="ma-0" justify="center">
       <p class="my-6 text-subtitle-1 font-weight-bold text-center">
@@ -199,7 +201,9 @@
       gólfdúkur er ekki innifalið í þessum dæmum.
     </p>
 
-    <v-carousel
+    <p-swiper class="my-3" :images="images2"></p-swiper>
+
+    <!-- <v-carousel
       class="my-3"
       cycle
       contain
@@ -219,7 +223,7 @@
           </v-img>
         </v-sheet>
       </v-carousel-item>
-    </v-carousel>
+    </v-carousel> -->
 
     <v-row class="ma-0 mt-8 mb-3" justify="center">
       <p class="ma-0 text-h5 text-uppercase text-center">
