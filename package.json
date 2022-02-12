@@ -20,6 +20,6 @@
     "vue-simple-photoswipe": "^1.0.3"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.12.1"
+    "@nuxtjs/vuetify": "^1.12.3"
   }
 }

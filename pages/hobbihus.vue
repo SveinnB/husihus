@@ -214,7 +214,7 @@
             height="100%"
             :src="img.src"
             :lazy-src="img.src"
-            @click="$photoswipe.open(i, images1)"
+            @click="$photoswipe.open(i, images2)"
           >
           </v-img>
         </v-sheet>
