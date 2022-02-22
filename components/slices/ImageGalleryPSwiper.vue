@@ -1,105 +1,103 @@
 <template>
   <v-container>
-    <v-row justify="center">
-      <v-dialog
-        v-model="dialog"
-        fullscreen
-        hide-overlay
-        transition="scale-transition"
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-row justify="center">
-            <v-img
-              v-for="(img, i) in images"
-              :key="'p_swiper_img_' + i"
-              :src="img.src"
-              :lazy-src="img.src"
-              :alt="img.alt"
-              class="ma-3 elevation-7"
-              width="100%"
-              height="100%"
-              :aspect-ratio="aspectRatio"
-              :max-width="slice.primary.max_width"
-              :max-height="slice.primary.max_height"
-              @click="open(i)"
-            >
-              <template v-slot:placeholder>
-                <v-row class="fill-height ma-0" align="center" justify="center">
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
-          </v-row>
-        </template>
-
-        <v-card class="d-flex" color="black" rounded="0">
-          <v-btn
-            @click="dialog = !dialog"
-            aria-label="close_nav_icon_button"
-            fab
-            text
-            large
-            class="dialog-close-button"
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="scale-transition"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-row justify="center">
+          <v-img
+            v-for="(img, i) in images"
+            :key="'p_swiper_img_' + i"
+            :src="img.src"
+            :lazy-src="img.src"
+            :alt="img.alt"
+            class="ma-3 elevation-7"
+            width="100%"
+            height="100%"
+            :aspect-ratio="aspectRatio"
+            :max-width="slice.primary.max_width"
+            :max-height="slice.primary.max_height"
+            @click="open(i)"
           >
-            <v-icon size="40" color="white"> mdi-close </v-icon>
-          </v-btn>
-          <div class="d-flex ma-auto p-div">
-            <v-container>
-              <v-row>
-                <v-carousel
-                  ref="caro"
-                  v-model="currentIndex"
-                  contain
-                  hide-delimiter-background
-                  hide-delimiters
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
+        </v-row>
+      </template>
+
+      <v-card class="d-flex" color="black" rounded="0">
+        <v-btn
+          @click="dialog = !dialog"
+          aria-label="close_nav_icon_button"
+          fab
+          text
+          large
+          class="dialog-close-button"
+        >
+          <v-icon size="40" color="white"> mdi-close </v-icon>
+        </v-btn>
+        <div class="d-flex ma-auto p-div">
+          <v-container>
+            <v-row>
+              <v-carousel
+                ref="caro"
+                v-model="currentIndex"
+                contain
+                hide-delimiter-background
+                hide-delimiters
+              >
+                <v-carousel-item
+                  v-for="(img, i) in images"
+                  :key="`InnerImage_${i}`"
                 >
-                  <v-carousel-item
-                    v-for="(img, i) in images"
-                    :key="`InnerImage_${i}`"
+                  <v-img
+                    contain
+                    height="100%"
+                    :src="img.src"
+                    :lazy-src="img.src"
+                    :alt="img.alt"
                   >
-                    <v-img
-                      contain
-                      height="100%"
-                      :src="img.src"
-                      :lazy-src="img.src"
-                      :alt="img.alt"
-                    >
-                      <template v-slot:placeholder>
-                        <v-row
-                          class="fill-height ma-0"
-                          align="center"
-                          justify="center"
-                        >
-                          <v-progress-circular
-                            indeterminate
-                            color="grey lighten-5"
-                          ></v-progress-circular>
-                        </v-row>
-                      </template>
-                    </v-img>
-                  </v-carousel-item>
-                </v-carousel>
-              </v-row>
-              <v-row justify="center" class="mt-6" height="30">
-                <v-sheet color="transparent" height="40">
-                  <p class="ma-0 text-h6 white--text">{{ title }}</p>
-                </v-sheet>
-              </v-row>
-              <v-row justify="center">
-                <v-sheet color="transparent" height="30">
-                  <p class="ma-0 text-caption white--text">
-                    {{ currentIndex + 1 }} / {{ images.length }}
-                  </p>
-                </v-sheet>
-              </v-row>
-            </v-container>
-          </div>
-        </v-card>
-      </v-dialog>
-    </v-row>
+                    <template v-slot:placeholder>
+                      <v-row
+                        class="fill-height ma-0"
+                        align="center"
+                        justify="center"
+                      >
+                        <v-progress-circular
+                          indeterminate
+                          color="grey lighten-5"
+                        ></v-progress-circular>
+                      </v-row>
+                    </template>
+                  </v-img>
+                </v-carousel-item>
+              </v-carousel>
+            </v-row>
+            <v-row justify="center" class="mt-6" height="30">
+              <v-sheet color="transparent" height="40">
+                <p class="ma-0 text-h6 white--text">{{ title }}</p>
+              </v-sheet>
+            </v-row>
+            <v-row justify="center">
+              <v-sheet color="transparent" height="30">
+                <p class="ma-0 text-caption white--text">
+                  {{ currentIndex + 1 }} / {{ images.length }}
+                </p>
+              </v-sheet>
+            </v-row>
+          </v-container>
+        </div>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
