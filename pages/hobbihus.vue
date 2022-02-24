@@ -3,7 +3,7 @@
     <h1>Hobbíhús</h1>
 
     <p class="text-subtitle-1">
-      Fullsmíðuð 15 fm. hobbúhús, óskráningarskylt og tilbúin til flutnings
+      Fullsmíðuð 15 fm. hobbíhús, óskráningarskyld og tilbúin til flutnings
     </p>
 
     <p-swiper class="my-3" :images="images1"></p-swiper>
