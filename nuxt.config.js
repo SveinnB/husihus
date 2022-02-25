@@ -50,9 +50,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/gtm',
     '@nuxtjs/prismic',
     '@nuxtjs/sitemap'
   ],
+  gtm: {
+    enabled: true,
+    id: 'GTM-NLLKHM4',
+  },
   prismic: {
     endpoint: 'https://husihusnuxt.cdn.prismic.io/api/v2',
     linkResolver: '@/plugins/link-resolver',
