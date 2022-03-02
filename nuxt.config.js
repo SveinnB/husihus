@@ -16,6 +16,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'facebook-domain-verification', content: '50xp5rf5rdnwj706ufayesd2h5f3v7' },
       { hid: 'description', name: 'description', content: 'Árbær ehf og Hús í hús ehf. Alhliða byggingaverktakar' },
       { hid: 'keywords', name: 'keywords', content: 'smiður, smiðir, verktakar, byggingaverktakar, viðhald, smíði, dewalt, milwaukee, árbær, hús í hús, hús, blokk, húsfélag' }
     ],
