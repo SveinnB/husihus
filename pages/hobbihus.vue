@@ -8,31 +8,9 @@
 
     <p-swiper class="my-3" :images="images1"></p-swiper>
 
-    <!-- <v-carousel
-      class="my-3"
-      cycle
-      contain
-      :height="$vuetify.breakpoint.mobile ? 300 : 500"
-      hide-delimiter-background
-      hide-delimiters
-    >
-      <v-carousel-item v-for="(img, i) in images1" :key="i">
-        <v-sheet height="100%" class="preview-img-item">
-          <v-img
-            contain
-            height="100%"
-            :src="img.src"
-            :lazy-src="img.src"
-            @click="$photoswipe.open(i, images1)"
-          >
-          </v-img>
-        </v-sheet>
-      </v-carousel-item>
-    </v-carousel> -->
-
     <v-row class="ma-0" justify="center">
       <p class="my-6 text-subtitle-1 font-weight-bold text-center">
-        Golfbílahús – Garðhús – Gestahús eða eitthvað allt annað.
+        Golfbílahús – Garðhús – Gestahús - Saunahús eða eitthvað allt annað.
       </p>
     </v-row>
 
@@ -53,10 +31,10 @@
     </p>
 
     <p>
-      Á Krókhálsi 6 stendur fullbúið sýningarhús sem er 15 fm. óskráningarskylt
-      golfbílahús sem staðsetja má utan byggingarreits. Húsið er með rafmagni,
-      inniljósum, útiljósum, ofni, golfdúk, hallandi þaki og álklæðningu. Það er
-      fullsmíðað og tilbúið til niðursetningar.
+      Við Krókháls 6 er hægt að skoða 15 fm. óskráningarskylt golfbílahús sem
+      staðsetja má utan byggingarreits. Húsið er með rafmagni, inniljósum,
+      útiljósum, ofni, gólfdúk, hallandi þaki og álklæðningu. Það er fullsmíðað
+      og tilbúið til niðursetningar.
     </p>
 
     <p>
@@ -69,15 +47,15 @@
 
     <v-expansion-panels>
       <v-expansion-panel>
-        <v-expansion-panel-header class="text-subtitle-1">
-          Skilalýsing á sýningarhúsi
+        <v-expansion-panel-header class="text-h6">
+          Skilalýsing á golfbílahúsi
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <p class="ma-0 my-3 text-h6">Þak</p>
           <v-simple-table dense>
             <template v-slot:default>
               <tbody>
-                <tr v-for="(item, i) in þak" :key="i">
+                <tr v-for="(item, i) in þak_golf" :key="i">
                   <td>{{ i + 1 }} - {{ item.text }}</td>
                 </tr>
               </tbody>
@@ -88,7 +66,7 @@
           <v-simple-table dense>
             <template v-slot:default>
               <tbody>
-                <tr v-for="(item, i) in utveggir" :key="i">
+                <tr v-for="(item, i) in utveggir_golf" :key="i">
                   <td>{{ i + 1 }} - {{ item.text }}</td>
                 </tr>
               </tbody>
@@ -98,7 +76,7 @@
           <v-simple-table dense>
             <template v-slot:default>
               <tbody>
-                <tr v-for="(item, i) in golf" :key="i">
+                <tr v-for="(item, i) in golf_golf" :key="i">
                   <td>{{ i + 1 }} - {{ item.text }}</td>
                 </tr>
               </tbody>
@@ -108,7 +86,7 @@
           <v-simple-table dense>
             <template v-slot:default>
               <tbody>
-                <tr v-for="(item, i) in hurdir" :key="i">
+                <tr v-for="(item, i) in hurdir_golf" :key="i">
                   <td>{{ i + 1 }} - {{ item.text }}</td>
                 </tr>
               </tbody>
@@ -118,7 +96,7 @@
           <v-simple-table dense>
             <template v-slot:default>
               <tbody>
-                <tr v-for="(item, i) in lagnir" :key="i">
+                <tr v-for="(item, i) in lagnir_golf" :key="i">
                   <td>{{ i + 1 }} - {{ item.text }}</td>
                 </tr>
               </tbody>
@@ -129,17 +107,79 @@
     </v-expansion-panels>
 
     <v-row justify="end" class="ma-0 mt-3">
-      <p class="ma-0">Verð 3.900.000 kr. með vsk</p>
+      <p class="ma-0">Verð 6.500.000 kr. með vsk</p>
     </v-row>
     <v-row justify="end" class="ma-0 mb-5">
-      <p class="ma-0 text-caption">Verð á fm. 260.000 kr. með vsk</p>
+      <p class="ma-0 text-caption">Verð á fm. 433.333 kr. með vsk</p>
     </v-row>
 
     <p>
-      Sýningarhúsið er klætt með áli sem er töluvert dýrara en tréklæðning.
-      Einnig eru gluggar í bílskúrshurð og inngangshurð. Gólf eru fullbúin með
-      vatnsheldum vínildúki en ef sambærilegt hús á að standa á steyptum grunni
-      breytast forsendur.
+      Álklæðning er töluvert dýrari en tréklæðning. Gluggar eru í bílskúrshurð
+      og inngangshurð. Gólf eru fullbúin með vatnsheldum vínildúk en ef
+      sambærilegt hús á að standa á steyptum grunni breytast forsendur.
+    </p>
+
+    <v-expansion-panels>
+      <v-expansion-panel>
+        <v-expansion-panel-header class="text-h6">
+          Skilalýsing á grunnhúsi
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <p>
+            Hús með hallandi þaki. Einangrað loft, gólf og veggir. Rakavarðar
+            spónaplötur í loftum á innveggjum og í gólfi. Án glugga, hurða og
+            klæðningar. Ómálað.
+          </p>
+
+          <p class="ma-0 my-3 text-h6">Þak</p>
+          <v-simple-table dense>
+            <template v-slot:default>
+              <tbody>
+                <tr v-for="(item, i) in þak_grunn" :key="i">
+                  <td>{{ i + 1 }} - {{ item.text }}</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+
+          <p class="ma-0 my-3 text-h6">Útveggir</p>
+          <v-simple-table dense>
+            <template v-slot:default>
+              <tbody>
+                <tr v-for="(item, i) in utveggir_grunn" :key="i">
+                  <td>{{ i + 1 }} - {{ item.text }}</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+          <p class="ma-0 my-3 text-h6">Gólf</p>
+          <v-simple-table dense>
+            <template v-slot:default>
+              <tbody>
+                <tr v-for="(item, i) in golf_grunn" :key="i">
+                  <td>{{ i + 1 }} - {{ item.text }}</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+
+          <p class="ma-0 mt-3 font-italic">
+            Athugið að grunnhúsið er ekki með gluggum, hurðum né með klæðningu.
+          </p>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+
+    <v-row justify="end" class="ma-0 mt-3">
+      <p class="ma-0">Verð 3.600.000 kr. með vsk</p>
+    </v-row>
+    <v-row justify="end" class="ma-0 mb-5">
+      <p class="ma-0 text-caption">Verð á fm. 240.000 kr. með vsk</p>
+    </v-row>
+
+    <p class="ma-0 mb-5">
+      Verð á húsunum geta verið mjög mismunandi og fer það eftir stærð,
+      efnisvali, frágangi og ýmsu öðru sem kaupandi biður um.
     </p>
 
     <p class="text-h6 ma-0 mb-2">Teikningar</p>
@@ -158,72 +198,38 @@
       </v-row>
     </div>
 
-    <p class="text-h6 ma-0 mb-2">Hugmyndir að útfærslu</p>
-
-    <v-card class="mb-6">
-      <v-card-title>Hugmynd 1</v-card-title>
-      <v-card-text>
-        <p class="black--text">
-          15 fm Hobbí hús frá Hús í hús með hallandi þaki og bandsagaðri
-          furuklæðningu, málað að ósk kaupanda. Fokhelt að innan, óeinangrað með
-          trégólfi, bílskúrshurð og inngangshurð án glugga.
-        </p>
-        <v-row justify="end" class="ma-0">
-          <p class="ma-0">Verðhugmynd 2.900.000 kr. með vsk</p>
-        </v-row>
-        <v-row justify="end" class="ma-0">
-          <p class="ma-0 text-caption">Verð á fm. 193.333 kr. með vsk</p>
-        </v-row>
-      </v-card-text>
-    </v-card>
-
-    <v-card class="mb-6">
-      <v-card-title>Hugmynd 2</v-card-title>
-      <v-card-text>
-        <p class="black--text">
-          15 fm Hobbí hús frá Hús í hús með hallandi þaki og bandsagaðri
-          furuklæðningu, málað að ósk kaupanda. Einangrað loft, gólf og veggir.
-          Rakavarðar spónaplötur í loftum á innveggjum og í gólfi. Veggir og
-          loft grunnað og málað. Bílskúrshurð og inngangshurð án glugga.
-        </p>
-        <v-row justify="end" class="ma-0">
-          <p class="ma-0">Verðhugmynd 3.400.000 kr. með vsk</p>
-        </v-row>
-        <v-row justify="end" class="ma-0">
-          <p class="ma-0 text-caption">Verð á fm. 226.667 kr. með vsk</p>
-        </v-row>
-      </v-card-text>
-    </v-card>
-
-    <p class="ma-0 mb-5 font-italic">
-      Verðhugmyndir byggja á skilalýsingu og efnisvali sýningarhúss en í þessum
-      dæmum eru húsin klædd með bandsagaðri furu í stað álbáru. Rafmagn, ljós og
-      gólfdúkur er ekki innifalið í þessum dæmum.
+    <p>
+      Þegar við vitum hverslags hús þú hefur í huga þá getum við gefið þér
+      tilboð í húsið þitt. Gott er að hafa svör við eftirfarandi spurningalista.
     </p>
 
-    <p-swiper class="my-3" :images="images2"></p-swiper>
+    <v-expansion-panels>
+      <v-expansion-panel>
+        <v-expansion-panel-header class="text-h6">
+          Spurningalisti fyrir hobbíhús
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-simple-table dense>
+            <template v-slot:default>
+              <tbody>
+                <tr v-for="(text, i) in checkList" :key="i">
+                  <td>{{ i + 1 }} - {{ text }}</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
 
-    <!-- <v-carousel
-      class="my-3"
-      cycle
-      contain
-      :height="$vuetify.breakpoint.mobile ? 300 : 500"
-      hide-delimiter-background
-      hide-delimiters
-    >
-      <v-carousel-item v-for="(img, i) in images2" :key="i">
-        <v-sheet height="100%" class="preview-img-item">
-          <v-img
-            contain
-            height="100%"
-            :src="img.src"
-            :lazy-src="img.src"
-            @click="$photoswipe.open(i, images2)"
-          >
-          </v-img>
-        </v-sheet>
-      </v-carousel-item>
-    </v-carousel> -->
+    <p class="ma-0 my-5">
+      Hafir þú áhuga á frekari upplýsingum er þér velkomið að hafa samband við
+      okkur. Þú getur sent okkur fyrirspurn
+      <a href="/hafa-samband">hér</a> eða sent okkur tölvupóst á
+      <a href="mailto:husihus@husihus.is">husihus@husihus.is</a>
+    </p>
+
+    <p-swiper class="my-5" :images="images2"></p-swiper>
 
     <v-row class="ma-0 mt-8 mb-3" justify="center">
       <p class="ma-0 text-h5 text-uppercase text-center">
@@ -279,7 +285,7 @@ export default {
       images1: [],
       images2: [],
       teikningar: [],
-      þak: [
+      þak_golf: [
         {
           text: "Tvöfalt lag af þakpappa, undirlag skrúfað og brætt saman á samskeitum og yfirlag heilbrætt",
         },
@@ -305,7 +311,7 @@ export default {
           text: "Málning",
         },
       ],
-      utveggir: [
+      utveggir_golf: [
         {
           text: "Smábáruál",
         },
@@ -334,7 +340,7 @@ export default {
           text: "Málning",
         },
       ],
-      golf: [
+      golf_golf: [
         {
           text: "Gólfefni, niðurlímdur vínildúkur",
         },
@@ -354,7 +360,7 @@ export default {
           text: "Músanet undir öllu húsinu",
         },
       ],
-      hurdir: [
+      hurdir_golf: [
         {
           text: "Bílskúrshurð Hvít ljósmál 1800x2100mm / með gluggum",
         },
@@ -362,7 +368,7 @@ export default {
           text: "Inngangshurð timbur ljósmál 750x2050mm / með glugga",
         },
       ],
-      lagnir: [
+      lagnir_golf: [
         {
           text: "Rafmagnstafla með lekaliða og 3 öryggjum",
         },
@@ -381,6 +387,86 @@ export default {
         {
           text: "Rafmagnsofn 600W",
         },
+      ],
+      þak_grunn: [
+        {
+          text: "Tvöfalt lag af þakpappa, undirlag skrúfað og brætt saman á samskeitum og yfirlag heilbrætt",
+        },
+        {
+          text: "25x125mm þakklæðning",
+        },
+        {
+          text: "25mm loftunarbil",
+        },
+        {
+          text: "Sperrur 45x145mm",
+        },
+        {
+          text: "Einangrun þéttull 120mm",
+        },
+        {
+          text: "Rakasperruplast",
+        },
+        {
+          text: "Nótaðar vatnsvarðar spónaplötur",
+        },
+      ],
+      utveggir_grunn: [
+        {
+          text: "21x45 lektur undir klæðningu",
+        },
+        {
+          text: "Öndunardúkur",
+        },
+        {
+          text: "Krossviður – 9mm",
+        },
+        {
+          text: "Timburgrind - 45x125mm",
+        },
+        {
+          text: "Einangrun – 120mm þéttull",
+        },
+        {
+          text: "Rakasperruplast",
+        },
+        {
+          text: "Rakavarðar nótaðar spónaplötur",
+        },
+      ],
+      golf_grunn: [
+        {
+          text: "Gólfplötur – 22mm vatnsvarðar spónaplötur",
+        },
+        {
+          text: "Rakasperruplast",
+        },
+        {
+          text: "Timburgrind 45x145mm",
+        },
+        {
+          text: "Einangrun 145mm þéttull",
+        },
+        {
+          text: "Músanet undir öllu húsinu",
+        },
+      ],
+      checkList: [
+        "Hvaða hlutverk á húsið að hafa? t.d. Tækjahús, gestahús, hobbýhús, sauna",
+        "Hversu stórt á húsið að vera? (óskráningarskylt 15 fm. eða minna)",
+        "Fer húsið á steyptan grunn?",
+        "Hvernig klæðning verður á húsinu, á að mála hana?",
+        "Viltu hafa rennihurð, inngangshurð, bílskúrshurð?",
+        "Hvernig glugga viltu hafa og hversu marga?",
+        "Verður rafmagn í húsinu?",
+        "Verða pípulagnir í húsinu?",
+        "Verða inniveggir í húsinu og þá úr hvaða efni?",
+        "Verða innihurðar?",
+        "Verða innréttingar?",
+        "Verður klósettherbergi?",
+        "Á að mála húsið að innan?",
+        "Hvernig gólfefni viltu hafa?",
+        "Aðrar hugmyndir ...",
       ],
     };
   },
